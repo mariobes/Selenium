@@ -44,7 +44,12 @@ public class Decathlon {
 
         SetUp();
 
-        return null;
+        WebElement buscarFutbol = driver.findElement(By.name("Ntt"));
+        buscarFutbol.sendKeys("Futbol");
+        WebElement clickBuscar = driver.findElement(By.id("search-button"));
+        clickBuscar.click();
+
+        return driver.getTitle();
     }
 
     public String anadirProductoCarrito() {
