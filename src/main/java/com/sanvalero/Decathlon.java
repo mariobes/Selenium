@@ -56,7 +56,23 @@ public class Decathlon {
 
         SetUp();
 
-        return null;
+        WebElement buscarProducto = driver.findElement(By.name("Ntt"));
+        buscarProducto.sendKeys("Mancuernas");
+        WebElement clickBuscar = driver.findElement(By.id("search-button"));
+        clickBuscar.click();
+
+        WebElement entrarEnProducto = driver.findElement(By.className("svelte-pnzgdi"));
+        entrarEnProducto.click();
+
+        WebElement anadirCesta = driver.findElement(By.className("cta--block"));
+        anadirCesta.click();
+
+        WebElement verCesta = driver.findElement(By.className("svelte-1l7i9qw"));
+        verCesta.click();
+
+        WebElement verProductosCesta = driver.findElement(By.className("fulfiller-link"));
+
+        return verProductosCesta.getText();
     }
 
 }
