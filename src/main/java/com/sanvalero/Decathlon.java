@@ -7,6 +7,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
+import java.util.List;
+
 public class Decathlon {
 
     private static WebDriver driver;
@@ -26,7 +28,16 @@ public class Decathlon {
 
         SetUp();
 
-        return null;
+        WebElement buscarProductos = driver.findElement(By.name("Ntt"));
+        buscarProductos.sendKeys("Zapatillas");
+        WebElement clickBuscar = driver.findElement(By.id("search-button"));
+        clickBuscar.click();
+
+        List<WebElement> productos = driver.findElements(By.className("svelte-bcstxf"));
+
+        int numeroProductos = productos.size();
+
+        return String.valueOf(numeroProductos);
     }
 
     public String buscarFutbol() {
