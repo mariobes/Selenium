@@ -14,18 +14,12 @@ public class DecathlonTest {
     }
 
     @Test
-    public void listarZapatillas() {
-        assertEquals("40", decathlon.listarZapatillas());
-    }
+    public void listarZapatillas() { assertEquals("40", decathlon.listarZapatillas()); }
 
     @Test
-    public void buscarFutbol() {
-        assertEquals("Tienda de fútbol | Decathlon", decathlon.buscarFutbol());
-    }
+    public void buscarFutbol() { assertEquals("Tienda de fútbol | Decathlon", decathlon.buscarFutbol()); }
 
     @Test
-    public void anadirProductoCarrito() {
-        assertEquals("Guardar producto de este vendedor para más tarde", decathlon.anadirProductoCarrito());
-    }
+    public void anadirProductoCarrito() { assertEquals("Guardar producto de este vendedor para más tarde", decathlon.anadirProductoCarrito()); }
 
 }
